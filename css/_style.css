@@ -1,0 +1,67 @@
+/***************************************************
+   DEBUT GLOBAL
+***************************************************/
+* {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: middle;
+    height: auto;
+}
+
+iframe {
+    max-width: 100%;
+    display: block;
+}
+nav ul{
+    padding: 0;
+    margin: 0;
+    list-style:none;
+}
+a{
+    text-decoration: none;
+    color:red; /* Inherit Forcer l'héritage du parent*/
+}
+
+body{
+
+    background-color: darkgreen;
+}
+
+
+.airdejeu{
+
+    width: 726px;
+    height: 726px;
+    margin: 80px auto;
+    display: flex;
+    flex-wrap: wrap;
+    border: 3px solid #373737;
+    border-radius: 8px;
+}
+.case{
+
+    width: 90px;
+    height: 90px;
+    background-color: black;
+    border: 1px solid #373737;
+}
+.caseblanche{
+
+    width: 90px;
+    height: 90px;
+    background-color: wheat;
+    border: 1px solid #373737;
+}
+
+.jetonblanc{
+
+
+}
+
+.jetonnoir{
+
+
+}
