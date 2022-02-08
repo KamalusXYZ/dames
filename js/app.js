@@ -11,30 +11,37 @@ selectionPion = (event) => {
 
 
 // verifier ici si la case selectionne fait partie du tableau A
+const even = (element) => element == event.target.parentElement.classList[1];
+verifCase = caseTypeA.some(even)
 
-caseSelectionnee = event.target.parentElement.classList[1]
+console.log(event.target.parentElement.classList[1])
+console.log(verifCase)
 
-caseJouableA = parseInt(caseSelectionnee) + 5
-caseJouableB = parseInt(caseSelectionnee) + 6
+if (verifCase === true){
 
-caseColoree1 = document.querySelector(`.c${caseJouableA}`)
-caseColoree2 = document.querySelector(`.c${caseJouableB}`)
+if (selectionEnCours == false) {
+    
+    
+    caseSelectionnee = event.target.parentElement.classList[1]
 
-caseColoree1.style.opacity = "0.3";
-caseColoree2.style.opacity = "0.3";
+    caseJouableA = parseInt(caseSelectionnee) + 5
+    caseJouableB = parseInt(caseSelectionnee) + 6
+    
+    caseColoree1 = document.querySelector(`.c${caseJouableA}`)
+    caseColoree2 = document.querySelector(`.c${caseJouableB}`)
+    
+    caseColoree1.style.opacity = "0.3";
+    caseColoree2.style.opacity = "0.3";
+    
+    console.log(caseSelectionnee)
+    selectionEnCours = true
 
-console.log(caseSelectionnee)
-selectionEnCours = true
 
-
+}
+}
+else console.log("la case n'est pas de type A")
 }
 
 document.onclick = selectionPion
 
 
-consoleTest = () => {
-
-    console.log(selectionEnCours)
-}
-
-document.onclick = consoleTest
