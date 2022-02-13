@@ -11,7 +11,7 @@ let caseTypeD = [5, 15, 25, 35, 45]
 selectionPion = (event) => {
     console.log(event.target.attributes[0].nodeValue)
 
-   
+
 
     /*****VERIFICATION SI LE JETON EST J1 OU IA */
     if (event.target.attributes[0].nodeValue === `img/jetonblanc.svg`) {
@@ -36,13 +36,25 @@ selectionPion = (event) => {
                 caseColoree1 = document.querySelector(`.c${caseJouableA}`)
                 caseColoree2 = document.querySelector(`.c${caseJouableB}`)
 
+                verifSiCaseOccuppe1 = caseColoree1.innerHTML
+                verifSiCaseOccuppe2 = caseColoree2.innerHTML
+                console.log(verifSiCaseOccuppe1)
+                if (verifSiCaseOccuppe1 === '<img src="img/jetonblanc.svg">') {
+
+                } else {
+                    caseColoree1.style.opacity = "0.3"
+                    selectionEnCoursIa = true
+                }
+
+                if (verifSiCaseOccuppe2 === '<img src="img/jetonblanc.svg">') {
+
+                } else {
+                    caseColoree2.style.opacity = "0.3"
+                    selectionEnCoursIa = true
+                }
+
+
                 
-
-                caseColoree1.style.backgroundColor = "green";
-                caseColoree2.style.backgroundColor = "green";
-
-                console.log(caseSelectionnee)
-                selectionEnCoursIa = true
 
             }
         } else console.log("la case n'est pas de type A")
@@ -66,71 +78,90 @@ selectionPion = (event) => {
                 caseColoree1 = document.querySelector(`.c${caseJouableA}`)
                 caseColoree2 = document.querySelector(`.c${caseJouableB}`)
 
-                caseColoree1.style.backgroundColor = "green";
-                caseColoree2.style.backgroundColor = "green";
+                verifSiCaseOccuppe1 = caseColoree1.innerHTML
+                verifSiCaseOccuppe2 = caseColoree2.innerHTML
+                console.log(verifSiCaseOccuppe1)
+                if (verifSiCaseOccuppe1 === '<img src="img/jetonblanc.svg">') {
 
-                console.log(caseSelectionnee)
-                selectionEnCoursIa = true
+                } else {
+                    caseColoree1.style.opacity = "0.3"
+                    selectionEnCoursIa = true
+                }
+
+                if (verifSiCaseOccuppe2 === '<img src="img/jetonblanc.svg">') {
+
+                } else {
+                    caseColoree2.style.opacity = "0.3"
+                    selectionEnCoursIa = true
+                }
+                
 
             }
         } else console.log("la case n'est pas de type B")
 
-          /***VERIFICATION SI LA CASE CLIQUE EST DE TYPE C */
-          const even3 = (element) => element == event.target.parentElement.classList[1];
-          verifCaseC = caseTypeC.some(even3)
-          console.log(event.target.parentElement.classList[1])
-          console.log(verifCaseC)
-  
-          if (verifCaseC === true) {
-              /***ACTION SI LA CASE CLIQUE EST DE TYPE C */
-  
-              if (selectionEnCoursIa == false) {
-  
-                  caseSelectionnee = event.target.parentElement.classList[1]
-  
-                  caseJouableA = parseInt(caseSelectionnee) + 5;
-                  
-  
-                  caseColoree1 = document.querySelector(`.c${caseJouableA}`)
-                
-  
-                  caseColoree1.style.backgroundColor = "green";
-                  
-  
-                  console.log(caseSelectionnee)
-                  selectionEnCoursIa = true
-  
-              }
-          } else console.log("la case n'est pas de type C")
+        /***VERIFICATION SI LA CASE CLIQUE EST DE TYPE C */
+        const even3 = (element) => element == event.target.parentElement.classList[1];
+        verifCaseC = caseTypeC.some(even3)
+        console.log(event.target.parentElement.classList[1])
+        console.log(verifCaseC)
 
-           /***VERIFICATION SI LA CASE CLIQUE EST DE TYPE D */
-           const even4 = (element) => element == event.target.parentElement.classList[1];
-           verifCaseD = caseTypeD.some(even4)
-           console.log(event.target.parentElement.classList[1])
-           console.log(verifCaseD)
-   
-           if (verifCaseD === true) {
-               /***ACTION SI LA CASE CLIQUE EST DE TYPE C */
-   
-               if (selectionEnCoursIa == false) {
-   
-                   caseSelectionnee = event.target.parentElement.classList[1]
-   
-                   caseJouableA = parseInt(caseSelectionnee) + 5;
-                   
-   
-                   caseColoree1 = document.querySelector(`.c${caseJouableA}`)
-                 
-   
-                   caseColoree1.style.backgroundColor = "green";
-                   
-   
-                   console.log(caseSelectionnee)
-                   selectionEnCoursIa = true
-   
-               }
-           } else console.log("la case n'est pas de type D")
-  
+        if (verifCaseC === true) {
+            /***ACTION SI LA CASE CLIQUE EST DE TYPE C */
+
+            if (selectionEnCoursIa == false) {
+
+                caseSelectionnee = event.target.parentElement.classList[1]
+
+                caseJouableA = parseInt(caseSelectionnee) + 5;
+
+
+                caseColoree1 = document.querySelector(`.c${caseJouableA}`)
+
+                verifSiCaseOccuppe1 = caseColoree1.innerHTML
+                
+                console.log(verifSiCaseOccuppe1)
+                if (verifSiCaseOccuppe1 === '<img src="img/jetonblanc.svg">') {
+
+                } else {
+                    caseColoree1.style.opacity = "0.3"
+                    selectionEnCoursIa = true
+                }
+
+
+            }
+        } else console.log("la case n'est pas de type C")
+
+        /***VERIFICATION SI LA CASE CLIQUE EST DE TYPE D */
+        const even4 = (element) => element == event.target.parentElement.classList[1];
+        verifCaseD = caseTypeD.some(even4)
+        console.log(event.target.parentElement.classList[1])
+        console.log(verifCaseD)
+
+        if (verifCaseD === true) {
+            /***ACTION SI LA CASE CLIQUE EST DE TYPE D */
+
+            if (selectionEnCoursIa == false) {
+
+                caseSelectionnee = event.target.parentElement.classList[1]
+
+                caseJouableA = parseInt(caseSelectionnee) + 5;
+
+
+                caseColoree1 = document.querySelector(`.c${caseJouableA}`)
+                verifSiCaseOccuppe1 = caseColoree1.innerHTML
+                
+                console.log(verifSiCaseOccuppe1)
+                if (verifSiCaseOccuppe1 === '<img src="img/jetonblanc.svg">') {
+
+                } else {
+                    caseColoree1.style.opacity = "0.3";
+                    selectionEnCoursIa = true
+                }
+
+
+            }
+        } else console.log("la case n'est pas de type D")
+
     }
 }
 
