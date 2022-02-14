@@ -7,24 +7,9 @@ let caseTypeB = [7, 8, 9, 10, 17, 18, 19, 20, 27, 28, 29, 30, 37, 38, 39, 40, 47
 let caseTypeC = [6, 16, 26, 36, 46]
 let caseTypeD = [5, 15, 25, 35, 45]
 
-const deSelection = () => {
-   
-    casenoire = document.querySelectorAll('div.casenoire')
-    casenoire.classList.remove("casenoireselectrouge")
-    console.log('suppr color' + casenoire)
-    console.log('etat de la selection : ' + selectionEnCours)
-    let selectionEnCours = false;
-
-
-}
-
-document.onkeydown = deSelection
 
 
 selectionPion = (event) => {
-   
-
-
 
     /*****VERIFICATION SI LE JETON EST J1 OU IA */
     if (event.target.attributes[0].nodeValue === `img/jetonblanc.svg`) {
@@ -224,15 +209,15 @@ selectionPion = (event) => {
 document.onclick = selectionPion
 
 
-const deSelection = () => {
+// const deSelection = () => {
    
-        casenoire = document.querySelectorAll('div.casenoire')
-        casenoire.classList.remove("casenoireselectrouge")
-        console.log('suppr color' + casenoire)
-        console.log('etat de la selection : ' + selectionEnCours)
-        let selectionEnCours = false;
+//         casenoire = document.querySelectorAll('div.casenoire')
+//         casenoire.classList.remove("casenoireselectrouge")
+//         console.log('suppr color' + casenoire)
+//         console.log('etat de la selection : ' + selectionEnCours)
+//         let selectionEnCours = false;
     
 
-}
+// }
 
-document.onkeydown = deSelection
+// document.onkeydown = deSelection
