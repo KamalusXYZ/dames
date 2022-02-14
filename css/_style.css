@@ -54,6 +54,18 @@ body {
 
 }
 
+.casenoireselectrouge {
+
+    width: 90px;
+    height: 90px;
+    background-color: green;
+    border: 1px solid #373737;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
 .casenoire img {
 
     width: 80px;
